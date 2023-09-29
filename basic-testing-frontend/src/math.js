@@ -10,7 +10,7 @@ export function add(numbers) {
 }
 
 export function calculateResult(numberValues) {
-  let result = '';
+  let result = "";
   try {
   const numbers = cleanNumbers(numberValues)
     result = add(numbers).toString();

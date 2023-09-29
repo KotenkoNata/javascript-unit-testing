@@ -7,8 +7,6 @@ export function extractNumbers(formData) {
 
 export function extractEnteredNumberValues(form) {
   const formData = new FormData(form);
-  const numberInputs = extractNumbers(formData);
-
-  return numberInputs;
+  return extractNumbers(formData);
 }
 
