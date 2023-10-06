@@ -23,5 +23,17 @@ it("should execute the writeFile method", ()=>{
 
     expect(fs.writeFile).toBeCalledWith(testFilename, testData);
     // expect(fs.writeFile).toBeCalled();
-    //return expect(writeData(testData, testFilename)).resolves.toBeUndefined();
+    // return expect(writeData(testData, testFilename)).resolves.toBeUndefined();
+})
+
+it("should return a promise that resolves to no value if called correctly", ()=>{
+    const testData = "Test";
+    const testFilename = "test.txt";
+
+    writeData(testData, testFilename);
+
+
+    // expect(fs.writeFile).toBeCalledWith(testFilename, testData);
+    // expect(fs.writeFile).toBeCalled();
+    return expect(writeData(testData, testFilename)).resolves.toBeUndefined();
 })
